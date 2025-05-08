@@ -1,0 +1,188 @@
+/* Additional CSS for the page templates - Add this to your existing style.css file */
+
+/* Page Hero Section */
+.page-hero {
+    height: 100vh;
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-hero-content {
+    max-width: 800px;
+    padding: 2rem;
+    position: relative;
+    z-index: 10;
+    margin-top: 60px;
+}
+
+.page-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease-out;
+}
+
+.page-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+    animation: fadeIn 1s ease-out 0.3s forwards;
+}
+
+/* Page Content */
+.page-content {
+    padding: 5rem 1rem;
+    background-color: var(--background);
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-block {
+    display: flex;
+    margin-bottom: 4rem;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--shadow);
+}
+
+.content-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.content-text {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-text h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.content-text p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.content-image {
+    flex: 1;
+    min-height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+.content-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.content-block:hover .content-image img {
+    transform: scale(1.05);
+}
+
+/* Grid Layout */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.grid-item {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px var(--shadow);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.grid-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px var(--shadow-strong);
+}
+
+.grid-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent2);
+}
+
+.grid-item h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.grid-item p {
+    color: var(--text-secondary);
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: var(--primary);
+    color: var(--text-light);
+    padding: 5rem 1rem;
+    text-align: center;
+}
+
+.cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-section .cta-button {
+    background-color: var(--accent1);
+    border: 2px solid transparent;
+}
+
+.cta-section .cta-button:hover {
+    background-color: transparent;
+    border: 2px solid var(--accent1);
+    color: var(--accent1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .page-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .content-block {
+        flex-direction: column !important;
+    }
+    
+    .content-image {
+        min-height: 200px;
+    }
+    
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
