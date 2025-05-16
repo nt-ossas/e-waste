@@ -3,6 +3,10 @@
         display: block;
     }
 
+    .header-container {
+        margin-inline: 0 !important;
+    }
+    
     .theme-switch {
         margin-right: 60px;
     }
