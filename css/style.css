@@ -515,3 +515,13 @@ a.content-block {
 a.content-block {
     margin: 0px 25px;
 }
+
+.audio-container{
+    padding-bottom:50px;
+}
+
+.audio-container h3{
+    color: var(--primary);
+    margin-bottom: 16px;
+    font-size: 24px;
+}
